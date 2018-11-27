@@ -5,11 +5,25 @@ public class ArrayListDemo{
 
 	public static void main(String[]args){
 
-		//
+		ArrayList<Integer> a = new ArrayList<>();
+		for(int i = 1; i <= 10; i++)
+			a.add(i);
+		print(a);
+
+		ArrayList<Integer> b = new ArrayList<>();
+		for(int i = 6; i <= 15; i++)
+			b.add(i);
+		print(b);
+
+		ArrayList<Integer> c = combine(a, b);
+		print(c);
+
+		ArrayList<Integer> d = removeDuplicates(c);
+		print(d);
 
 	}
 
-	public static ArrayList combine(ArrayList<Integer> a, ArrayList<Integer> b){
+	public static ArrayList<Integer> combine(ArrayList<Integer> a, ArrayList<Integer> b){
 
 		for(int i = 0; i < b.size(); i++)
 			a.add(b.get(i));
@@ -25,7 +39,7 @@ public class ArrayListDemo{
 
 	}
 
-	public static ArrayList removeDuplicates(ArrayList<Integer> list){
+	public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> list){
 
 		return list;
 
